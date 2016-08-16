@@ -1,4 +1,3 @@
-#
 __version__ = "0.3.4"
 
 
@@ -12,16 +11,11 @@ def git_commit_count():
 
   http://programmers.stackexchange.com/a/151558
   """
-	print()
-	'dd'
-	commit_count = None
-
 	import subprocess
-	output = subprocess.check_output(
-		["git", "rev-list", "--count", "HEAD"])
-	commit_count = int(output)
 
-	return commit_count
+	output = int(subprocess.check_output(["git", "rev-list", "--count", "HEAD"]))
+
+	return output
 
 
 def git_latest_commit():
@@ -30,12 +24,9 @@ def git_latest_commit():
 
   http://programmers.stackexchange.com/a/151558
   """
-	print()
-	'ee'
-	latest_commit = None
 	import subprocess
-	output = subprocess.check_output(
-		["git", "rev-parse", "HEAD"]).strip()
+
+	output = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip()
 
 	return output
 
@@ -67,7 +58,5 @@ def version(format_str='{short}'):
 
 
 if __name__ == '__main__':
-	print()
-	version('Short Version String: "{short}"')
-	print()
-	version('Full Version String: "{long}"')
+	print(version('Short Version String: "{short}"'))
+	print(version('Full Version String: "{long}"'))

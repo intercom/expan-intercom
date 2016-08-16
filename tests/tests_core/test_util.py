@@ -7,7 +7,8 @@ import expan.core.util as util
 
 
 class UtilFunctionsTestCase(unittest.TestCase):
-	def test_scale_range(self):
+	@staticmethod
+	def test_scale_range():
 		res = util.scale_range([1, 3, 5])
 		np.testing.assert_allclose(res, [0., 0.5, 1.])
 
@@ -35,6 +36,8 @@ class UtilFunctionsTestCase(unittest.TestCase):
 		res = util.scale_range([5], old_max=4)
 		np.testing.assert_allclose(res, [1.])
 
+		res = util.scale_range([1, 3, 5, np.inf], squash_inf=True, squash_outside_range=False)
+		np.testing.assert_allclose(res, [0., 0.5, 1., 1.])
 
 if __name__ == '__main__':
 	unittest.main()

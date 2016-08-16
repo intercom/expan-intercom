@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-
+from warnings import warn
 
 def scale_range(x, new_min=0.0, new_max=1.0, old_min=None, old_max=None, squash_outside_range=True, squash_inf=False, ):
 	"""

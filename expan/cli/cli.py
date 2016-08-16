@@ -6,7 +6,6 @@ import logging
 import pickle
 
 import pandas as pd
-
 from expan.core.experiment import Experiment
 from expan.core.experimentdata import ExperimentData
 
@@ -66,9 +65,9 @@ def print_results(delta, sga, output_file):
 def check_input_data(args):
 	print(args)
 	if not args.kpis:
-		raise UsageError('Kpis file shall be provided (-k cli parameter)')
+		raise UsageError('KPIs file should be provided (-k CLI parameter)')
 	if not args.metadata:
-		raise UsageError('Metadata file shall be provided (-m cli parameter)')
+		raise UsageError('Metadata file should be provided (-m CLI parameter)')
 
 
 def prepare_cli_parameters(args):

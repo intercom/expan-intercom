@@ -1,22 +1,21 @@
-import os
 import unittest
-from os.path import dirname, join, realpath
+from os import getcwd, makedirs, walk, rmdir, remove
+from os.path import dirname, join, realpath, exists
 
 import expan.data.csv_fetcher as csv_fetcher
 import simplejson as json
 import tests.tests_core.test_data as td
 
-__location__ = realpath(join(os.getcwd(), dirname(__file__)))
+__location__ = realpath(join(getcwd(), dirname(__file__)))
 
 TEST_FOLDER = __location__ + '/test_folder'
 
 
 class CsvFetcherTestCase(unittest.TestCase):
 	def setUp(self):
-
 		# create test folder
-		if not os.path.exists(TEST_FOLDER):
-			os.makedirs(TEST_FOLDER)
+		if not exists(TEST_FOLDER):
+			makedirs(TEST_FOLDER)
 
 		# generate metrics and metadata
 		(metrics, metadata) = td.generate_random_data()
@@ -29,14 +28,13 @@ class CsvFetcherTestCase(unittest.TestCase):
 			json.dump(metadata, f)
 
 	def tearDown(self):
-
 		# remove all test files and test folder
-		for root, dirs, files in os.walk(TEST_FOLDER, topdown=False):
+		for root, dirs, files in walk(TEST_FOLDER, topdown=False):
 			for name in files:
-				os.remove(os.path.join(root, name))
+				remove(join(root, name))
 			for name in dirs:
-				os.rmdir(os.path.join(root, name))
-		os.rmdir(TEST_FOLDER)
+				rmdir(join(root, name))
+		rmdir(TEST_FOLDER)
 
 	def test_csv_fetcher(self):
 		# should work:

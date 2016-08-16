@@ -46,7 +46,8 @@ def generate_random_data():
 	metadata = {
 		'primary_KPI': 'normal_shifted',
 		'source': 'simulated',
-		'experiment': 'random_data_generation'
+		'experiment': 'random_data_generation',
+		'baseline_variant': 'A'
 	}
 
 	return test_data_frame, metadata

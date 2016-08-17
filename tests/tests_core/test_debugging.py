@@ -1,9 +1,9 @@
+import imp
 import logging
 import logging.config
 import os
 
 import expan.core.debugging as dbgcls
-import imp
 
 imp.reload(dbgcls)
 
@@ -15,13 +15,10 @@ def test_default_debugging(capsys):
 	dbg = dbgcls.Dbg()
 	dbg(-2, 'This should be an error')
 	out, err = capsys.readouterr()
-	print()
-	'out is: ' + out
-	print()
-	'err is: ' + err
+	print('out is: ' + out)
+	print('err is: ' + err)
 	errparts = err.split('|')
-	print()
-	'errparts[1] is: [{}]'.format(errparts[1])
+	print('errparts[1] is: [{}]'.format(errparts[1]))
 	assert (errparts[1] == 'test_default_debugging: This should be an error\n')
 
 	dbg(-1, 'This should be a warning')

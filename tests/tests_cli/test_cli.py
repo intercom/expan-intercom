@@ -4,6 +4,7 @@ from os import getcwd, makedirs, walk, rmdir, remove
 from os.path import dirname, join, realpath, exists
 
 import simplejson as json
+
 import tests.tests_core.test_data as td
 from expan.cli.cli import check_input_data, UsageError, prepare_cli_parameters, parse_metadata, run_analysis
 
@@ -56,12 +57,16 @@ class CliTestCase(unittest.TestCase):
 							  ('features_file', 'kpis_file', 'metadata_file', 'output_file'))
 
 	def test_run_analysis(self):
-		run_analysis(features_file=None,
-					 kpis_file=TEST_FOLDER + '/kpis.csv.gz',
-					 metadata_file=TEST_FOLDER + '/metadata.json')
+		self.assertIsNotNone(run_analysis(features_file=None,
+										  kpis_file=TEST_FOLDER + '/kpis.csv.gz',
+										  metadata_file=TEST_FOLDER + '/metadata.json'))
+
+		self.assertRaises(ValueError, run_analysis,
+						  features_file=TEST_FOLDER + '/features.csv.gz',
+						  kpis_file=TEST_FOLDER + '/kpis.csv.gz',
+						  metadata_file=TEST_FOLDER + '/metadata.json')
 
 	def test_parse_metadata(self):
-		# print(parse_metadata(TEST_FOLDER + '/metadata.json'))
 		self.assertDictEqual(parse_metadata(TEST_FOLDER + '/metadata.json'),
 							 {'source': 'simulated',
 							  'primary_KPI': 'normal_shifted',

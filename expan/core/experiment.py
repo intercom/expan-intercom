@@ -59,6 +59,8 @@ class Experiment(object):
         if 'entity' not in self.data.columns:
             raise KeyError("There is no 'entity' column in the data.")
         if self.data.entity.duplicated().any():
+            duplicates = self.data[self.data.duplicated(['entity'], keep=False)]
+            logging.info(f'Duplicates sample: {duplicates.head()}')
             raise ValueError('Entities in data should be unique.')
 
         if test.variants.variant_column_name not in self.data.columns:

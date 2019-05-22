@@ -6,17 +6,21 @@ ExpAn: Experiment Analysis
         :target: https://travis-ci.org/zalando/expan
         :alt: Build status
 
+.. image:: https://coveralls.io/repos/github/zalando/expan/badge.svg
+        :target: https://coveralls.io/github/zalando/expan
+        :alt: Code coverage
+
 .. image:: https://img.shields.io/pypi/v/expan.svg
         :target: https://pypi.python.org/pypi/expan
         :alt: Latest PyPI version
 
 .. image:: https://img.shields.io/pypi/status/expan.svg
-   :target: https://pypi.python.org/pypi/expan
-   :alt: Development Status
+        :target: https://pypi.python.org/pypi/expan
+        :alt: Development Status
 
 .. image:: https://img.shields.io/pypi/pyversions/expan.svg
-   :target: https://pypi.python.org/pypi/expan
-   :alt: Python Versions
+        :target: https://pypi.python.org/pypi/expan
+        :alt: Python Versions
 
 .. image:: https://img.shields.io/pypi/l/expan.svg
         :target: https://pypi.python.org/pypi/expan/
@@ -37,12 +41,11 @@ used by both data scientists optimizing a user interface and biologists
 running wet-lab experiments. The library is also standalone and can be
 imported and used from within other projects and from the command line.
 
-Major statistical functionalities include:
 
-- **delta**
-- **subgroup analysis**
-- **trend analysis** (coming soon)
+Documentation
+=============
 
+The latest stable version is 1.0.1. Please check out our `tutorial and documentation <http://expan.readthedocs.io/>`__.
 
 Installation
 ============
@@ -82,34 +85,6 @@ Once you have a copy of the source, you can install it with:
 
 .. _Github repo: https://github.com/zalando/expan
 .. _tarball: https://github.com/zalando/expan/tarball/master
-
-
-Usage
-=====
-
-To use ExpAn in a project::
-
-    import expan
-
-Some mock-up data:
-
-::
-
-    from expan.core.experiment import Experiment
-    from expan.core.util import generate_random_data
-
-    data, metadata = generate_random_data()
-    exp = Experiment(control_variant_name='B', data=data, metadata=metadata)
-    exp.delta()
-
-
-
-Documentation
-=============
-
-The latest stable version is 0.6.6.
-
-`ExpAn main documentation <http://expan.readthedocs.io/>`__
 
 
 License

@@ -1,11 +1,159 @@
 Change Log
 ==========
 
-`Unreleased <https://github.com/zalando/expan/tree/HEAD>`__
------------------------------------------------------------
+`v1.0.0 <https://github.com/zalando/expan/tree/v1.0.0>`__ (2018-03-22)
+----------------------------------------------------------------------
 
 `Full
-Changelog <https://github.com/zalando/expan/compare/v0.6.5...HEAD>`__
+Changelog <https://github.com/zalando/expan/compare/v0.6.13...v1.0.0>`__
+
+**Merged pull requests:**
+
+-  Finish Documentation
+   `#204 <https://github.com/zalando/expan/pull/204>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  Fix logging sga error logging
+   `#203 <https://github.com/zalando/expan/pull/203>`__
+   (`igusher <https://github.com/igusher>`__)
+-  Project Headache `#194 <https://github.com/zalando/expan/pull/194>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+
+`v0.6.13 <https://github.com/zalando/expan/tree/v0.6.13>`__ (2018-03-15)
+------------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.12...v0.6.13>`__
+
+**Implemented enhancements:**
+
+-  Applying bins to data frames
+   `#165 <https://github.com/zalando/expan/issues/165>`__
+
+**Fixed bugs:**
+
+-  Sample size with an unequal split ratio
+   `#187 <https://github.com/zalando/expan/issues/187>`__
+-  SGA Percentile Issue
+   `#178 <https://github.com/zalando/expan/issues/178>`__
+
+**Merged pull requests:**
+
+-  Wrap sga in try catch
+   `#202 <https://github.com/zalando/expan/pull/202>`__
+   (`igusher <https://github.com/igusher>`__)
+-  Multiple correction method module
+   `#201 <https://github.com/zalando/expan/pull/201>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  Adapted util module and util unit tests
+   `#199 <https://github.com/zalando/expan/pull/199>`__
+   (`daryadedik <https://github.com/daryadedik>`__)
+-  Adapt early stopping
+   `#198 <https://github.com/zalando/expan/pull/198>`__
+   (`daryadedik <https://github.com/daryadedik>`__)
+-  Adapt statistics.py
+   `#197 <https://github.com/zalando/expan/pull/197>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  Adapt experiment module
+   `#196 <https://github.com/zalando/expan/pull/196>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  Make result classes JSON serializable
+   `#195 <https://github.com/zalando/expan/pull/195>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  Results data structure
+   `#193 <https://github.com/zalando/expan/pull/193>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  fixed small typos in percentiles and doc text
+   `#191 <https://github.com/zalando/expan/pull/191>`__
+   (`daryadedik <https://github.com/daryadedik>`__)
+-  fixing sample size estimation
+   `#188 <https://github.com/zalando/expan/pull/188>`__
+   (`gbordyugov <https://github.com/gbordyugov>`__)
+
+`v0.6.12 <https://github.com/zalando/expan/tree/v0.6.12>`__ (2018-01-24)
+------------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.11...v0.6.12>`__
+
+**Merged pull requests:**
+
+-  Doc update `#186 <https://github.com/zalando/expan/pull/186>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  AXO-103 include variance in delta / group-sequential reports
+   `#185 <https://github.com/zalando/expan/pull/185>`__
+   (`gbordyugov <https://github.com/gbordyugov>`__)
+
+`v0.6.11 <https://github.com/zalando/expan/tree/v0.6.11>`__ (2018-01-23)
+------------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.10...v0.6.11>`__
+
+**Merged pull requests:**
+
+-  Axo-91 bug fix sga
+   `#184 <https://github.com/zalando/expan/pull/184>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  added code coverage badge and reformatted README.rst a bit
+   `#183 <https://github.com/zalando/expan/pull/183>`__
+   (`mkolarek <https://github.com/mkolarek>`__)
+
+`v0.6.10 <https://github.com/zalando/expan/tree/v0.6.10>`__ (2018-01-12)
+------------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.9...v0.6.10>`__
+
+`v0.6.9 <https://github.com/zalando/expan/tree/v0.6.9>`__ (2018-01-12)
+----------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.8...v0.6.9>`__
+
+**Merged pull requests:**
+
+-  Update deployment flow
+   `#182 <https://github.com/zalando/expan/pull/182>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+
+`v0.6.8 <https://github.com/zalando/expan/tree/v0.6.8>`__ (2018-01-12)
+----------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.7...v0.6.8>`__
+
+`v0.6.7 <https://github.com/zalando/expan/tree/v0.6.7>`__ (2018-01-10)
+----------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.6...v0.6.7>`__
+
+**Closed issues:**
+
+-  Group Sequential - Percentile Issue
+   `#176 <https://github.com/zalando/expan/issues/176>`__
+
+**Merged pull requests:**
+
+-  Increase version to 0.6.7
+   `#181 <https://github.com/zalando/expan/pull/181>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+-  fixed last command in "Deploying to PyPI" part of contributing.rst
+   `#180 <https://github.com/zalando/expan/pull/180>`__
+   (`mkolarek <https://github.com/mkolarek>`__)
+-  Extended multiple correction for group sequential, added doc for
+   multiple correction.
+   `#179 <https://github.com/zalando/expan/pull/179>`__
+   (`daryadedik <https://github.com/daryadedik>`__)
+-  Fix information fraction calculation
+   `#177 <https://github.com/zalando/expan/pull/177>`__
+   (`shansfolder <https://github.com/shansfolder>`__)
+
+`v0.6.6 <https://github.com/zalando/expan/tree/v0.6.6>`__ (2017-11-27)
+----------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/zalando/expan/compare/v0.6.5...v0.6.6>`__
 
 **Closed issues:**
 

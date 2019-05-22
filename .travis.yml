@@ -1,14 +1,13 @@
 branches:
   only:
   - master
-  - dev
-  - /[v]\d\.\d\.\d/
+  - "/[v]\\d\\.\\d\\.\\d/"
 cache: pip
 deploy:
   provider: pypi
-  user: mkolarek
+  user: ShanHuang
   password:
-    secure: A5mVqXR2gLCN6mi6oPR5HmhiPhhHurePcx8VDFojmRNSqViFADg/WZnd9rZvzmMQB4wjKs8JmK742FbqYQlTrLCWSG2oF28dnWLVtZBnQfHFfMEgoQfkF/KXFmtuJ1Sw+5opE8CfV5+75zKs6mhPeobieFgpTExzfuyA6ldlaeAbGFBEGh4P8Vd093Jgmf3o7xu19aMsr9zn3EJWf0UR+zlc8RnCi33jRoVYpP5/QcUKHM5Jm0ejN6L+6FMyhKqbxPMk6Umd0PPuwtOv2hSs175r4lvxzFZYJKcIkuf4mqTIZzdKOSVlHNBALEenQJweq5/KNWDh/XlN3YFFd9kGPHZP1UHgJmDePRvRXTCvjbpqfV94Cq6K7mvHRMcnziQjDd2/CZgS7Nsa5Qt4uig7hm/BzhoywrjjqhmRQ2sErCQSLpJx8ecWvI/cYFVzM4HdZrvUZ1IhxM5Gt6vITdhgJzR7f2TWNs6IQERhTv5pba0hSmPuj/ys/B3Mhpci7oXkfEpgzhjJTMrLQ1OIrmr3XFrfS87cRPHyqCqVzmayNrT/7leqAQpUgxYY9XzMqXriPDqrL+s8gIsgJRGAoMTl/XW0/nDY5nYW+n3wgzQjAX73ZE0WwUgyJaphf5zz2CgPaydt30dBBU1Pu/JfLbnVo4VzVm0SUB9IWMV/abbsIAw=
+    secure: AHb9dKqmLIXAMHiibBHkmMpzf4aUsBwgW745FUGX1w0dV5q2mBn967MlVKjxJPzGa5vtVIoGOy/Qj+J0i6RqrhbeP0S07zxQH+JeV1CufU0sHZ0LIA7DmH0htSH42SyL+ZmKa/O+FH76OWHAXkhO62hgAp3knfOUhHC6YTquyKba826R5ltK/3Yzwl1DFULr0orAAnV79xBjBRfRvl2YxA9ng8jE7p4QoUkLmnQZ7928JB1O7Q/lKVrZaL8HH1ejssTgeHfhldsOo7jrosALTrQxGlltvjb+NTiNRSH7c8yX4aIR2g5RunVWyb1OkxYiNKJKFH9C4sgKZaVDyfyvZ+BzZC7sS+fka8yRU/iR/EaS7/1V62VDUsnJvQqoBiJoFWVFvrv+EHmdA9perqNED8ENRwZf7EFKc/55XYNYj0ukWJy4TtgHylkA2/MPtMPRh1SfivwqwO/3+2ZLrAZf/LTDJyO0H01JdUAKpPKPNQE7V07yKhd+3CpTki8rF9i9R6FF1G5k/IDLOKD31o8AHXfo661NpxYzB39/9CILFG8q4vU2staFcmxCDNIQX+y6hnRQUqfntYnkKjkumq2/0pGKanZjZElw/8xnkx0JF+C/d6sf+uQ9zOn2Pxf8IcfYHdXOyCtQ8vYc3Yr5Pd/uEAcaoQ587IJnuyVzpcswyKE=
   on:
     branch: master
     tags: true
@@ -17,15 +16,11 @@ deploy:
 env:
 - TOXENV=py
 install:
-#- pip install --upgrade pip setuptools tox coveralls
 - pip install tox coveralls
 - pip install -r requirements_tox_test.txt
 language: python
 python:
-#- pypy
-#- 2.6
 - 2.7
-#- 3.5
 - 3.6
 script: tox
 after_success:
